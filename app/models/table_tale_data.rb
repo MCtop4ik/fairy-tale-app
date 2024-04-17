@@ -1,0 +1,2 @@
+class TableTaleData < ApplicationRecord
+end

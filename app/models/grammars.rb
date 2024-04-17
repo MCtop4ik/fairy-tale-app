@@ -1,0 +1,2 @@
+class AllTales < ApplicationRecord
+end
