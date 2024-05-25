@@ -1,2 +1,2 @@
-class AllTales < ApplicationRecord
+class Users < ApplicationRecord
 end

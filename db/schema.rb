@@ -10,5 +10,45 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema[7.1].define(version: 2023_10_15_164208) do
+ActiveRecord::Schema[7.1].define(version: 2024_05_23_111351) do
+  create_table "all_tales", force: :cascade do |t|
+    t.string "title"
+    t.text "description"
+    t.integer "user_id"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.string "timestamp"
+  end
+
+  create_table "grammars", force: :cascade do |t|
+    t.text "phrase"
+    t.text "transcription"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.text "translation"
+    t.string "tale_ids"
+  end
+
+  create_table "table_tale_data", force: :cascade do |t|
+    t.text "title"
+    t.text "full_text"
+    t.text "grammar"
+    t.integer "author_id"
+    t.text "bg_pic"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.string "video_src"
+  end
+
+  create_table "users", force: :cascade do |t|
+    t.string "first_name"
+    t.string "last_name"
+    t.string "first_last"
+    t.string "initials"
+    t.integer "role_id"
+    t.string "nickname"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
+
 end

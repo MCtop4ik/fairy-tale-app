@@ -1,1 +1,2 @@
-
+class AllTales < ApplicationRecord
+end
